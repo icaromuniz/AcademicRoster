@@ -1,9 +1,14 @@
 package au.edu.envirotech.architecture;
 
-import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
-@Stateless
-public class AbstractDao {
+public abstract class AbstractDao {
 	
-
+	@PersistenceContext
+	private EntityManager entityManager;
+	
+	public EntityManager getEntityManager() {
+		return entityManager;
+	}
 }

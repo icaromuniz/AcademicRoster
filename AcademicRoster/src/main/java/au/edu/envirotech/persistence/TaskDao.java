@@ -1,13 +1,14 @@
 package au.edu.envirotech.persistence;
 
 import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+
+import au.edu.envirotech.architecture.AbstractDao;
+import au.edu.envirotech.model.Task;
 
 @Stateless
-public class TaskDao {
+public class TaskDao extends AbstractDao {
 
-	@PersistenceContext
-	public EntityManager em;
-
+	public Task save(Task task) {
+		return getEntityManager().merge(task);
+	}
 }
