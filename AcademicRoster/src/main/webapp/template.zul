@@ -1,0 +1,22 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="new page title" border="normal">
+		<grid>
+			<rows>
+				<row>
+					<label value="cell 1"/>
+					<label value="cell 2"/>
+					<label value="cell 3"/>
+					<label value="cell 4"/>
+				</row>
+				<row>
+					<label value="cell 5"/>
+					<label value="cell 6"/>
+					<label value="cell 7"/>
+					<label value="cell 8"/>
+				</row>
+			</rows>
+		</grid>
+		New Content Here!
+	</window>
+</zk>

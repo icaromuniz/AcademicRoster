@@ -10,4 +10,9 @@
 	</preference>
 	-->
 	
+	<library-property>
+        <name>org.zkoss.theme.preferred</name>
+        <value>breeze</value>
+    </library-property>
+	
 </zk>
