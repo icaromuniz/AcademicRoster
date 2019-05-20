@@ -7,5 +7,13 @@
 		<label>teste</label>
 		<separator/>
 		<button>Click</button>
+		<tabbox>
+			<tabs>
+				<tab label="painel"></tab>
+				<tab label="Next"></tab>
+				<tab label="Following" iconSclass="z-icon-forward"/>
+				
+			</tabs>
+		</tabbox>
 	</window>
 </zk>

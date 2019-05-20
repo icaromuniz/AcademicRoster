@@ -15,7 +15,7 @@
 		body {
 			color: #393939;
 			font-family: Tahoma, Geneva, sans-serif;
-			max-width: 1400px;
+			max-width: 1500px;
 			margin: auto;
 			padding: 0 30px;
 		}
@@ -53,35 +53,38 @@
 		<!-- MENU ENTRIES -->
 		.z-menuitem-text {
 			padding-left: 10px;
+			color: Teal;
 		}
 		
 		.z-menu-text {
 			padding-left: 10px;
+			color: Teal;
+		}
+		
+		<!-- MENUS -->
+		.z-menuitem-content {
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+		
+		.z-menu-content {
+			padding-top: 5px;
+			padding-bottom: 5px;
 		}
 	</style>
 	
-	<borderlayout hflex="true" style="border: none; background-color: WhiteSmoke;">
-		<north border="none" height="50px">
-			<hlayout vflex="true" style="padding: 5px;">
-				<image src="https://cdn2.hubspot.net/hubfs/3445426/Copy%20of%20LOGO_PNG.png" vflex="true"/>
-				<!-- <image src="https://cdn2.hubspot.net/hubfs/3445426/logo%20circule-1.png"
-					style="align: center; padding: 10px;" height="100px"/> -->
-				<!-- <vlayout style="text-align: left; font-weight: bold; font-style: oblique;" vflex="true">
-					<style>
-						span {
-							color: Teal;
-						}
-					</style>
-					<space/>
-					<label style="font-weight: bold;" value="User: ..."/>
-					<label style="font-weight: bold;" value="Role: ..."/>
-					<label style="font-weight: bold;" value="Date: ..."/>
-				</vlayout> -->
-			</hlayout>
+	<borderlayout hflex="true" style="border: none;">
+		<north border="none" hflex="min">
+			<hbox style="padding: 5px 0;" hflex="true">
+				<image src="https://cdn2.hubspot.net/hubfs/3445426/Copy%20of%20LOGO_PNG.png" height="60px"/>
+				<space hflex="true"/>
+				<toolbarbutton iconSclass="z-icon-gear" style="font-size: xx-large; color: Teal; vertical-align: bottom;"/>
+				<toolbarbutton iconSclass="z-icon-user" style="font-size: xx-large; color: Teal;"/>
+			</hbox>
 		</north>
 		
-		<west width="200px" border="normal" collapsible="true" style="border: 1px solid LightGrey;">
-			<menubar id="menubar" orient="vertical">
+		<west border="none">
+			<menubar id="menubar" orient="vertical" style="border: 1px solid LightGrey; border-right: none; background: none;" vflex="true">
 				<menuitem label="Dashboard" href="/dashboard.zul" iconSclass="z-icon-comments"/>
 				<menu label="Academic" iconSclass="z-icon-graduation-cap">
 					<menupopup>
@@ -129,8 +132,10 @@
 
 		<center id="mainContent" autoscroll="true" border="normal" self="@insert(content)" />
 
-		<south style="background-color: WhiteSmoke;" height="50px" border="none">
-			<image src="https://cdn2.hubspot.net/hubfs/3445426/Copy%20of%20LOGO_PNG.png" vflex="true"/>
+		<south style="background-color: WhiteSmoke; padding: 3px;" height="50px" border="none">
+			<hlayout style="text-align: center;" vflex="true">
+				<image src="https://cdn2.hubspot.net/hubfs/3445426/Copy%20of%20LOGO_PNG.png" vflex="true"/>
+			</hlayout>
 		</south>
 	</borderlayout>
 </zk>
