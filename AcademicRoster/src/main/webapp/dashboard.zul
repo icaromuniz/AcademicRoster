@@ -1,0 +1,15 @@
+<?page contentType="text/html;charset=UTF-8"?>
+<?init class="org.zkoss.zk.ui.util.Composition" arg0="/template.zul"?>
+
+<zk>
+	<!-- <groupbox self="@define(content)" vflex="1" >
+		<caption label="Dashboard" iconSclass="z-icon-comments"/>
+		<label>teste</label>
+		<button>Click</button>
+	</groupbox> -->
+	<window id="win" border="none" self="@define(content)" vflex="1" >
+		<caption label="Dashboard" iconSclass="z-icon-comments"/>
+		<label>teste</label>
+		<button>Click</button>
+	</window>
+</zk>

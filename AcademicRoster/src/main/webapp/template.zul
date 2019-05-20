@@ -1,22 +1,127 @@
-<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<?page title="Page Title" contentType="text/html;charset=UTF-8"?>
 <zk>
-	<window title="new page title" border="normal">
-		<grid>
-			<rows>
-				<row>
-					<label value="cell 1"/>
-					<label value="cell 2"/>
-					<label value="cell 3"/>
-					<label value="cell 4"/>
-				</row>
-				<row>
-					<label value="cell 5"/>
-					<label value="cell 6"/>
-					<label value="cell 7"/>
-					<label value="cell 8"/>
-				</row>
-			</rows>
-		</grid>
-		New Content Here!
-	</window>
+	<!-- ===================== -->
+	<!-- Atribuição do favicon -->
+	<!-- ===================== -->
+	<script id="script" type="text/javascript"><![CDATA[
+		var link = document.createElement('link');
+		link.type = 'image/x-icon';
+		link.rel = 'shortcut icon';
+		link.href = 'https://envirotech.edu.au/favicon.ico';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	]]></script>
+
+	<style>
+		body {
+			color: #393939;
+			font-family: Tahoma, Geneva, sans-serif;
+			max-width: 1200px;
+			margin: auto;
+			padding: 0 30px;
+		}
+	
+		<!-- WINDOW TITLE -->
+		.z-window-header {
+			color: Teal;
+			font-weight: bold;
+		}
+		
+		<!-- GRID HEADER -->
+		.z-column-content {
+			color: Teal;
+		}
+		
+		<!-- NOTIFICATION STYLE -->
+		.z-notification-content {
+		    width: 400px;
+		    min-height: 30px;
+		    font-size: 14px;
+		    font-weight: bold;
+		}
+		
+		<!-- BUTTONS -->
+		.z-button {
+			color: Teal;
+		}
+		
+		<!-- WINDOW TITLE -->
+		.z-caption-label {
+			font-weight: bold;
+			font-size: medium;
+		}
+		
+		<!-- MENU ENTRIES -->
+		.z-menuitem-text {
+			padding-left: 10px;
+		}
+		
+		.z-menu-text {
+			padding-left: 10px;
+		}
+	</style>
+	
+	<borderlayout width="1200px" style="border: none; background-color: WhiteSmoke;">
+		<north border="none">
+			<hlayout>
+				<image src="https://cdn2.hubspot.net/hubfs/3445426/logo%20circule-1.png"
+					style="align: center; padding: 10px;" height="100px"/>
+				<vlayout style="text-align: left; font-weight: bold; font-style: oblique;" vflex="true">
+					<style>
+						span {
+							color: Teal;
+						}
+					</style>
+					<space/>
+					<label style="font-weight: bold;" value="User: ..."/>
+					<label style="font-weight: bold;" value="Role: ..."/>
+					<label style="font-weight: bold;" value="Date: ..."/>
+				</vlayout>
+			</hlayout>
+		</north>
+		
+		<west width="200px" border="normal" collapsible="true" style="border: 1px solid LightGrey;">
+			<menubar id="menubar" orient="vertical">
+				<menuitem label="Dashboard" href="/dashboard.zul" iconSclass="z-icon-comments"/>
+				<menu label="Academic" iconSclass="z-icon-graduation-cap">
+					<menupopup>
+						<menuitem label="Unit of Competency" iconSclass="z-icon-book"/>
+						<menuitem label="Qualification" disabled="true" iconSclass="z-icon-windows"/>
+						<menuitem label="Room Allocation" iconSclass="z-icon-linux"/>
+						<menuitem label="Report" disabled="true" iconSclass="z-icon-apple" />
+					</menupopup>
+				</menu>
+				<menu label="Management" iconSclass="z-icon-line-chart">
+					<menupopup>
+						<menuitem label="Task Logger" iconSclass="z-icon-tasks"/>
+						<menuitem label="Work Chart" iconSclass="z-icon-bar-chart"/>
+						<menuitem label="Task Report" disabled="true" iconSclass="z-icon-windows"/>
+						<menuitem label="Report" disabled="true" iconSclass="z-icon-pie-chart" />
+					</menupopup>
+				</menu>
+				<menu label="Human Resources" iconSclass="z-icon-user">
+					<menupopup>
+						<menuitem label="Unit of Competency" iconSclass="z-icon-book"/>
+						<menuitem label="Qualification" disabled="true" iconSclass="z-icon-windows"/>
+						<menuitem label="Room Allocation" iconSclass="z-icon-linux"/>
+						<menuitem label="Report" disabled="true" iconSclass="z-icon-apple" />
+					</menupopup>
+				</menu>
+				<menu label="Information Technology" iconSclass="z-icon-database">
+					<menupopup>
+						<menuitem label="Unit of Competency" iconSclass="z-icon-book"/>
+						<menuitem label="Qualification" disabled="true" iconSclass="z-icon-windows"/>
+						<menuitem label="Room Allocation" iconSclass="z-icon-linux"/>
+						<menuitem label="Report" disabled="true" iconSclass="z-icon-apple" />
+					</menupopup>
+				</menu>
+				<menuitem label="Log out" onClick='$composer.executaLogout()' iconSclass="z-icon-sign-out" />
+			</menubar>
+		</west>
+
+		<center id="mainContent" autoscroll="true" border="normal" self="@insert(content)" />
+
+		<south style="background-color: WhiteSmoke;" height="50px" border="none">
+			<image src="https://cdn2.hubspot.net/hubfs/3445426/Copy%20of%20LOGO_PNG.png"/>
+		</south>
+	</borderlayout>
 </zk>
