@@ -1,0 +1,62 @@
+<?page title="Task Tracker icaro#linux" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<!-- ===================== -->
+	<!-- Atribuição do favicon -->
+	<!-- ===================== -->
+	<script id="script" type="text/javascript"><![CDATA[
+		var link = document.createElement('link');
+		link.type = 'image/x-icon';
+		link.rel = 'shortcut icon';
+		link.href = 'https://envirotech.edu.au/favicon.ico';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	]]></script>
+	
+	<style>
+	.z-caption-content{
+		color: DodgerBlue;
+	}
+		
+	.z-button {
+		color: DodgerBlue;
+	}
+	</style>
+	<div height="100%">
+		<space vflex="true" />
+		<div>
+			<hlayout>
+				<space hflex="true" />
+				<groupbox hflex="min" closable="false">
+					<caption iconSclass="z-icon-user" label="Login"/>
+					<grid hflex="min" >
+						<rows>
+							<row>
+								<label value="E-mail:" />
+								<textbox id="textboxEmail" type="email" cols="30"
+									constraint="/.+@.+\.[a-z]+/: e-mail address only, no empty"
+									onOK="textboxPassword.focus()" />
+							</row>
+							<row>
+								<label value="Password:" />
+								<textbox id="textboxPassword"
+									type="password" constraint="no empty"
+									forward="onOK = buttonOK.onClick" />
+							</row>
+							<row spans="2" align="center">
+								<button id="buttonOK" label="Confirm" iconSclass="z-icon-check-square-o"
+									onClick='$composer.doLogin()' />
+							</row>
+							<row spans="2" align="center">
+								<a onClick='Executions.sendRedirect("registration.zul")'>
+									New user registration
+								</a>
+							</row>
+						</rows>
+					</grid>
+				</groupbox>
+				<space hflex="true" />
+			</hlayout>
+		</div>
+		<space vflex="true" />
+		<space vflex="true" />
+	</div>
+</zk>
