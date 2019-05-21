@@ -132,7 +132,7 @@
 
 		<center id="mainContent" autoscroll="true" border="normal" self="@insert(content)" />
 
-		<south style="background-color: WhiteSmoke; padding: 3px;" height="50px" border="none">
+		<south style="padding: 3px;" height="50px" border="none">
 			<hlayout style="text-align: center;" vflex="true">
 				<image src="https://cdn2.hubspot.net/hubfs/3445426/Copy%20of%20LOGO_PNG.png" vflex="true"/>
 			</hlayout>

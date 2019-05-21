@@ -23,11 +23,11 @@ public class UnitOfCompetency extends AbstractEntity {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "UNIT_OF_COMPETENCY_ID_GENERATOR")
 	private int id;
 
-	@Column(nullable = false, length = 10)
 	@Length(max=10)
+	@Column(nullable = false, length = 10)
 	private String code;
-
-	@Column(nullable = false)
+	
+	@Column(name = "UNIT_SECTOR", nullable = false) 
 	private String unitSector;
 
 	@Override

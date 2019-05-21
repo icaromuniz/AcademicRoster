@@ -5,6 +5,7 @@
 		<class>au.edu.envirotech.model.Task</class>
 		<class>au.edu.envirotech.model.UnitOfCompetency</class>
 		<class>au.edu.envirotech.model.User</class>
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
 			<property name="eclipselink.ddl-generation.output-mode" value="sql-script"/>
