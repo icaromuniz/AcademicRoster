@@ -39,7 +39,7 @@ public class Task implements Serializable {
 	private Time startTime;
 
 	@Column(name = "under_plan")
-	private Boolean underPlan;
+	private boolean underPlan;
 
 	// bi-directional many-to-one association to User
 	@ManyToOne
@@ -125,10 +125,6 @@ public class Task implements Serializable {
 		return this.underPlan;
 	}
 
-	public void setUnderPlan(Boolean underPlan) {
-		this.underPlan = underPlan;
-	}
-
 	public User getUser() {
 		return this.user;
 	}
@@ -137,4 +133,15 @@ public class Task implements Serializable {
 		this.user = user;
 	}
 
+	public void setUnderPlan(boolean underPlan) {
+		this.underPlan = underPlan;
+	}
+
+	public String getUnderPlanLabel() {
+		return underPlan ? "Yes" : "No";
+	}
+
+	public void setUnderPlanLabel(String underPlanLabel) {
+		this.underPlan = "Yes".equalsIgnoreCase(underPlanLabel);
+	}
 }

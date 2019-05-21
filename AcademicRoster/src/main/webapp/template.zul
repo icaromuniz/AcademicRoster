@@ -96,7 +96,7 @@
 				</menu>
 				<menu label="Marketing &amp; Sales" iconSclass="z-icon-bullhorn">
 					<menupopup>
-						<menuitem label="Task Logger" iconSclass="z-icon-tasks" href="/task-logger.zul"/>
+						<menuitem label="Task Logger" iconSclass="z-icon-tasks" href="/tasklogger.zul"/>
 						<menuitem label="Work Chart" iconSclass="z-icon-bar-chart"/>
 						<menuitem label="Task Report" disabled="true" iconSclass="z-icon-windows"/>
 						<menuitem label="Report" disabled="true" iconSclass="z-icon-pie-chart" />
@@ -104,13 +104,29 @@
 				</menu>
 				<menu label="Management" iconSclass="z-icon-line-chart">
 					<menupopup>
-						<menuitem label="Task Logger" iconSclass="z-icon-tasks" href="/task-logger.zul"/>
+						<menuitem label="Task Logger" iconSclass="z-icon-tasks" href="/tasklogger.zul"/>
 						<menuitem label="Work Chart" iconSclass="z-icon-bar-chart"/>
 						<menuitem label="Task Report" disabled="true" iconSclass="z-icon-windows"/>
 						<menuitem label="Report" disabled="true" iconSclass="z-icon-pie-chart" />
 					</menupopup>
 				</menu>
 				<menu label="Human Resources" iconSclass="z-icon-user">
+					<menupopup>
+						<menuitem label="Unit of Competency" iconSclass="z-icon-book"/>
+						<menuitem label="Qualification" disabled="true" iconSclass="z-icon-windows"/>
+						<menuitem label="Room Allocation" iconSclass="z-icon-linux"/>
+						<menuitem label="Report" disabled="true" iconSclass="z-icon-apple" />
+					</menupopup>
+				</menu>
+				<menu label="Finance" iconSclass="z-icon-usd">
+					<menupopup>
+						<menuitem label="Unit of Competency" iconSclass="z-icon-book"/>
+						<menuitem label="Qualification" disabled="true" iconSclass="z-icon-windows"/>
+						<menuitem label="Room Allocation" iconSclass="z-icon-linux"/>
+						<menuitem label="Report" disabled="true" iconSclass="z-icon-apple" />
+					</menupopup>
+				</menu>
+				<menu label="Sustainability" iconSclass="z-icon-leaf">
 					<menupopup>
 						<menuitem label="Unit of Competency" iconSclass="z-icon-book"/>
 						<menuitem label="Qualification" disabled="true" iconSclass="z-icon-windows"/>
