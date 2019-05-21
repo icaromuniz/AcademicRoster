@@ -1,0 +1,111 @@
+<?page title="Task Logger" contentType="text/html;charset=UTF-8"?>
+<?init class="org.zkoss.zk.ui.util.Composition" arg0="/template.zul"?>
+<zk>
+	<window id="window" border="none" self="@define(content)"
+		apply="au.edu.envirotech.presentation.TaskLoggerComposer">
+		<caption label="Task Logger" iconSclass="z-icon-tasks" />
+
+		<hlayout width="100%" valign="middle" style="padding-bottom: 2px;">
+			<label hflex="true" />
+			<button onClick="$composer.addTask()"
+				iconSclass="z-icon-plus" tooltiptext="Add another task" />
+			<button onClick="$composer.removeTask()"
+				iconSclass="z-icon-minus" tooltiptext="Remove selected" />
+		</hlayout>
+
+		<listbox id="listbox" model="@bind($composer.taskList)" style="border: none;"
+			multiple="true" checkmark="true" vflex="true" rows="10"
+			mold="paging">
+			<listhead>
+				<listheader hflex="min" />
+				<listheader label="Date" hflex="min" sort="auto(date)" />
+				<listheader label="Department" hflex="min"
+					sort="auto(department)" />
+				<listheader label="Task Description" width="30%"
+					sort="auto(description)" />
+				<listheader label="Start" hflex="min"
+					sort="auto(startTime)" />
+				<listheader label="Finish" hflex="min"
+					sort="auto(finishTime)" />
+				<!-- <listheader label="Spent" hflex="min" sort="auto(timeSpent)" align="center"/> -->
+				<listheader label="Planned" hflex="min"
+					sort="auto(underPlan)" />
+				<listheader label="Notes (Optional)" sort="auto(note)" />
+				<listheader label="Outcomes (Optional)"
+					sort="auto(outcome)" />
+				<listheader label="Follow Up Action (Optional)"
+					sort="auto(followUpAction)" />
+			</listhead>
+			<template name="model" var="task">
+				<listitem value="@bind(task)">
+					<listcell />
+					<listcell>
+						<datebox value="@bind(task.date)" cols="10"
+							constraint="no future" />
+					</listcell>
+					<listcell>
+						<combobox autodrop="true" cols="20"
+							model="@load($composer.departmentList)"
+							value="@bind(task.department)">
+							<template name="model" var="dept">
+								<comboitem label="@bind(dept)" />
+							</template>
+						</combobox>
+					</listcell>
+					<listcell>
+						<textbox value="@bind(task.description)"
+							rows="3" hflex="true" maxlength="500"
+							placeholder="Please, describe the execution of the task..." />
+					</listcell>
+					<listcell>
+						<timebox value="@bind(task.startTime)" cols="6"
+							format="HH:mm" />
+					</listcell>
+					<listcell>
+						<timebox value="@bind(task.finishTime)" cols="6"
+							format="HH:mm" />
+					</listcell>
+					<!-- <listcell label="@load(task.timeSpent) @converter('formatedDate', format='HH:mm')"/> -->
+					<listcell>
+						<combobox cols="4" autodrop="true"
+							autocomplete="true" value="@bind(task.underPlanLabel)"
+							style="@load(Boolean.parseBoolean(task.underPlan) ? 'color: blue;' : 'color: black;')">
+							<comboitem label="Yes" />
+							<comboitem label="No" />
+						</combobox>
+					</listcell>
+					<listcell>
+						<textbox value="@bind(task.note)" rows="3"
+							hflex="true" maxlength="500" />
+					</listcell>
+					<listcell>
+						<textbox value="@bind(task.outcome)" rows="3"
+							hflex="true" maxlength="500" />
+					</listcell>
+					<listcell>
+						<textbox value="@bind(task.followUpAction)"
+							rows="3" hflex="true" maxlength="500" />
+					</listcell>
+				</listitem>
+			</template>
+		</listbox>
+
+		<separator />
+
+		<hlayout style="text-align: center;">
+			<button label="Save" onClick="$composer.saveTaskList()"
+				iconSclass="z-icon-save" tooltiptext="Save set as is"
+				style="color: green;" />
+			<space />
+			<button href="/" label="Discard" iconSclass="z-icon-trash"
+				tooltiptext="Discard all unsaved changes" style="color: green;" />
+			<space />
+			<button href="/report.zul" label="Report"
+				iconSclass="z-icon-list"
+				tooltiptext="Go to Reporting and Filtering page" />
+			<space />
+			<button label="Chart" iconSclass="z-icon-bar-chart"
+				href="/chart.zul" style="float: right;" />
+		</hlayout>
+	</window>
+</zk>
