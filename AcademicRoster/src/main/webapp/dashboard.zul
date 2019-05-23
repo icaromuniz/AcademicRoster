@@ -2,10 +2,10 @@
 <?init class="org.zkoss.zk.ui.util.Composition" arg0="/template.zul"?>
 
 <zk>
-	<window id="win" border="none" self="@define(content)" vflex="1" >
+	<window id="win" border="none" self="@define(content)" vflex="1">
+	
 		<caption label="Dashboard" iconSclass="z-icon-comments"/>
-		<label>teste</label>
-		<separator/>
+		
 		<button>Click</button>
 		<tabbox>
 			<tabs>

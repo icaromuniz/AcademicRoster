@@ -1,10 +1,30 @@
 <?page title="Roster and Allocations" contentType="text/html;charset=UTF-8"?>
 <?init class="org.zkoss.zk.ui.util.Composition" arg0="/template.zul"?>
 <zk>
-	<window id="window" border="none" self="@define(content)">
+	<style>
+		.course {
+			text-align: left;
+			font-size: x-small;
+		}
+		
+		.teacher {
+			font-size: x-small;
+			color: chocolate;
+			font-weight: bold;
+		}
+
+		.delivery {
+			font-size: x-small;
+		}
+
+		.occupation {
+			font-size: x-small;
+		}
+	</style>
+	<window id="window" border="none" self="@define(content)" vflex="true" apply="au.edu.envirotech.presentation.RosterAndAllocationComposer">
 		<caption label="Roster and Allocations" iconSclass="z-icon-tasks" />
 		
-		<grid style="border: none;">
+		<grid style="border: none;" vflex="true">
 			<auxhead>
 				<auxheader label="Allocation" colspan="3" align="center"/>
 				<auxheader label="Qualification" colspan="5" align="center"/>
@@ -21,97 +41,289 @@
 			</columns>
 			<rows>
 				<row>
-					<label value="12"/>
-					<label value="10:00"/>
-					<label value="11:00"/>
-					<label value="Marketing and Communication"/>
-					<label value="ELICOS"/>
-					<label value="Digital Media"/>
-					<label value="Cookery"/>
-					<label value="Leadership and Management"/>
-				</row>
-				<row>
-					<label value="12"/>
-					<label value="15:30"/>
-					<label value="17:30"/>
-					<label value="Digital Media"/>
-					<label value="ELICOS"/>
-					<label value="Cookery"/>
-					<label value="Leadership and Management"/>
-					<label value="Marketing and Communication"/>
-				</row>
-				<row>
-					<label value="12"/>
-					<label value="20:00"/>
-					<label value="21:00"/>
-					<label value="123"/>
-					<label value="123"/>
-					<label value="123"/>
-					<label value="123"/>
-					<label value="123"/>
-				</row>
-				<row>
-					<label value="345"/>
-					<label value="15:00"/>
-					<label value="17:00"/>
-					<label value="123"/>
-					<label value="123"/>
-					<label value="123"/>
-					<label value="ELICOS"/>
-					<label value="ELICOS"/>
-				</row>
-				<row>
-					<label value="345"/>
-					<label value="19:30"/>
-					<label value="20:30"/>
-					<label value="Digital Media"/>
-					<label value="Marketing and Communication"/>
-					<label value="ELICOS"/>
-					<label value="Leadership and Management"/>
-					<label value="Cookery"/>
-				</row>
-				<row>
-					<label value="345"/>
-					<label value="19:30"/>
-					<label value="20:30"/>
-					<label value="Digital Media"/>
-					<vbox>
-						<label style="color: Green;" value="Marketing and Communication"/>
-						<label style="color: Orange;" value="Trainer: Stephen"/>
-						<label style="color: Orange;" value="Trainer: Stephen"/>
+					<vbox align="center">
+						<label value="31"/>
+						<label value="(42 seats)"/>
 					</vbox>
-					<label value="ELICOS"/>
-					<label value="Leadership and Management"/>
-					<label value="Cookery"/>
+					<label value="19:30"/>
+					<label value="20:30"/>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL BSB42415 - Certificate IV in Marketing and Communication AND BSB42618 - Certificate IV in New Small Business" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day (Group 1)"/>
+							<label hflex="true" sclass="teacher" value="Kincaid Ashmore"/>
+							<label hflex="true" sclass="occupation" value="87 students"/>
+						</vbox>
+					</vbox>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL SIT50416 - Diploma of Hospitality Management SIT60316 - Advanced Diploma of Hospitality Management" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day"/>
+							<label hflex="true" sclass="teacher" value="Frank Guarnaccia"/>
+							<label hflex="true" sclass="occupation" value="47 students"/>
+						</vbox>
+					</vbox>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL BSB42415 - Certificate IV in Marketing and Communication AND BSB42618 - Certificate IV in New Small Business" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day (Group 1)"/>
+							<label hflex="true" sclass="teacher" value="Kincaid Ashmore"/>
+							<label hflex="true" sclass="occupation" value="87 students"/>
+						</vbox>
+					</vbox>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL BSB42415 - Certificate IV in Marketing and Communication AND BSB42618 - Certificate IV in New Small Business" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day (Group 1)"/>
+							<label hflex="true" sclass="teacher" value="Kincaid Ashmore"/>
+							<label hflex="true" sclass="occupation" value="87 students"/>
+						</vbox>
+					</vbox>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL BSB42415 - Certificate IV in Marketing and Communication AND BSB42618 - Certificate IV in New Small Business" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day (Group 1)"/>
+							<label hflex="true" sclass="teacher" value="Kincaid Ashmore"/>
+							<label hflex="true" sclass="occupation" value="87 students"/>
+						</vbox>
+					</vbox>
+				</row>
+				<row>
+					<vbox align="center">
+						<label value="31"/>
+						<label value="(42 seats)"/>
+					</vbox>
+					<label value="19:30"/>
+					<label value="20:30"/>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL BSB42415 - Certificate IV in Marketing and Communication AND BSB42618 - Certificate IV in New Small Business" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day (Group 1)"/>
+							<label hflex="true" sclass="teacher" value="Kincaid Ashmore"/>
+							<label hflex="true" sclass="occupation" value="87 students"/>
+						</vbox>
+					</vbox>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL SIT50416 - Diploma of Hospitality Management SIT60316 - Advanced Diploma of Hospitality Management" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day"/>
+							<label hflex="true" sclass="teacher" value="Frank Guarnaccia"/>
+							<label hflex="true" sclass="occupation" value="47 students"/>
+						</vbox>
+					</vbox>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL BSB42415 - Certificate IV in Marketing and Communication AND BSB42618 - Certificate IV in New Small Business" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day (Group 1)"/>
+							<label hflex="true" sclass="teacher" value="Kincaid Ashmore"/>
+							<label hflex="true" sclass="occupation" value="87 students"/>
+						</vbox>
+					</vbox>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL BSB42415 - Certificate IV in Marketing and Communication AND BSB42618 - Certificate IV in New Small Business" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day (Group 1)"/>
+							<label hflex="true" sclass="teacher" value="Kincaid Ashmore"/>
+							<label hflex="true" sclass="occupation" value="87 students"/>
+						</vbox>
+					</vbox>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL BSB42415 - Certificate IV in Marketing and Communication AND BSB42618 - Certificate IV in New Small Business" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day (Group 1)"/>
+							<label hflex="true" sclass="teacher" value="Kincaid Ashmore"/>
+							<label hflex="true" sclass="occupation" value="87 students"/>
+						</vbox>
+					</vbox>
+				</row>
+				<row>
+					<vbox align="center">
+						<label value="31"/>
+						<label value="(42 seats)"/>
+					</vbox>
+					<label value="19:30"/>
+					<label value="20:30"/>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL BSB42415 - Certificate IV in Marketing and Communication AND BSB42618 - Certificate IV in New Small Business" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day (Group 1)"/>
+							<label hflex="true" sclass="teacher" value="Kincaid Ashmore"/>
+							<label hflex="true" sclass="occupation" value="87 students"/>
+						</vbox>
+					</vbox>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL SIT50416 - Diploma of Hospitality Management SIT60316 - Advanced Diploma of Hospitality Management" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day"/>
+							<label hflex="true" sclass="teacher" value="Frank Guarnaccia"/>
+							<label hflex="true" sclass="occupation" value="47 students"/>
+						</vbox>
+					</vbox>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL BSB42415 - Certificate IV in Marketing and Communication AND BSB42618 - Certificate IV in New Small Business" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day (Group 1)"/>
+							<label hflex="true" sclass="teacher" value="Kincaid Ashmore"/>
+							<label hflex="true" sclass="occupation" value="87 students"/>
+						</vbox>
+					</vbox>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL BSB42415 - Certificate IV in Marketing and Communication AND BSB42618 - Certificate IV in New Small Business" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day (Group 1)"/>
+							<label hflex="true" sclass="teacher" value="Kincaid Ashmore"/>
+							<label hflex="true" sclass="occupation" value="87 students"/>
+						</vbox>
+					</vbox>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL BSB42415 - Certificate IV in Marketing and Communication AND BSB42618 - Certificate IV in New Small Business" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day (Group 1)"/>
+							<label hflex="true" sclass="teacher" value="Kincaid Ashmore"/>
+							<label hflex="true" sclass="occupation" value="87 students"/>
+						</vbox>
+					</vbox>
+				</row>
+				<row>
+					<vbox align="center">
+						<label value="31"/>
+						<label value="(42 seats)"/>
+					</vbox>
+					<label value="19:30"/>
+					<label value="20:30"/>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL BSB42415 - Certificate IV in Marketing and Communication AND BSB42618 - Certificate IV in New Small Business" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day (Group 1)"/>
+							<label hflex="true" sclass="teacher" value="Kincaid Ashmore"/>
+							<label hflex="true" sclass="occupation" value="87 students"/>
+						</vbox>
+					</vbox>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL SIT50416 - Diploma of Hospitality Management SIT60316 - Advanced Diploma of Hospitality Management" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day"/>
+							<label hflex="true" sclass="teacher" value="Frank Guarnaccia"/>
+							<label hflex="true" sclass="occupation" value="47 students"/>
+						</vbox>
+					</vbox>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL BSB42415 - Certificate IV in Marketing and Communication AND BSB42618 - Certificate IV in New Small Business" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day (Group 1)"/>
+							<label hflex="true" sclass="teacher" value="Kincaid Ashmore"/>
+							<label hflex="true" sclass="occupation" value="87 students"/>
+						</vbox>
+					</vbox>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL BSB42415 - Certificate IV in Marketing and Communication AND BSB42618 - Certificate IV in New Small Business" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day (Group 1)"/>
+							<label hflex="true" sclass="teacher" value="Kincaid Ashmore"/>
+							<label hflex="true" sclass="occupation" value="87 students"/>
+						</vbox>
+					</vbox>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL BSB42415 - Certificate IV in Marketing and Communication AND BSB42618 - Certificate IV in New Small Business" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day (Group 1)"/>
+							<label hflex="true" sclass="teacher" value="Kincaid Ashmore"/>
+							<label hflex="true" sclass="occupation" value="87 students"/>
+						</vbox>
+					</vbox>
+				</row>
+				<row>
+					<vbox align="center">
+						<label value="31"/>
+						<label value="(42 seats)"/>
+					</vbox>
+					<label value="19:30"/>
+					<label value="20:30"/>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL BSB42415 - Certificate IV in Marketing and Communication AND BSB42618 - Certificate IV in New Small Business" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day (Group 1)"/>
+							<label hflex="true" sclass="teacher" value="Kincaid Ashmore"/>
+							<label hflex="true" sclass="occupation" value="87 students"/>
+						</vbox>
+					</vbox>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL SIT50416 - Diploma of Hospitality Management SIT60316 - Advanced Diploma of Hospitality Management" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day"/>
+							<label hflex="true" sclass="teacher" value="Frank Guarnaccia"/>
+							<label hflex="true" sclass="occupation" value="47 students"/>
+						</vbox>
+					</vbox>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL BSB42415 - Certificate IV in Marketing and Communication AND BSB42618 - Certificate IV in New Small Business" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day (Group 1)"/>
+							<label hflex="true" sclass="teacher" value="Kincaid Ashmore"/>
+							<label hflex="true" sclass="occupation" value="87 students"/>
+						</vbox>
+					</vbox>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL BSB42415 - Certificate IV in Marketing and Communication AND BSB42618 - Certificate IV in New Small Business" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day (Group 1)"/>
+							<label hflex="true" sclass="teacher" value="Kincaid Ashmore"/>
+							<label hflex="true" sclass="occupation" value="87 students"/>
+						</vbox>
+					</vbox>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL BSB42415 - Certificate IV in Marketing and Communication AND BSB42618 - Certificate IV in New Small Business" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day (Group 1)"/>
+							<label hflex="true" sclass="teacher" value="Kincaid Ashmore"/>
+							<label hflex="true" sclass="occupation" value="87 students"/>
+						</vbox>
+					</vbox>
 				</row>
 				<row>
 					<label value="345"/>
 					<label value="19:30"/>
 					<label value="20:30"/>
-					<label value="Digital Media"/>
-					<label value="Marketing and Communication"/>
-					<label value="ELICOS"/>
-					<label value="Leadership and Management"/>
-					<label value="Cookery"/>
-				</row>
-				<row>
-					<label value="6"/>
-					<label value="10:30"/>
-					<label value="123"/>
-					<label value="123"/>
-					<label value="123"/>
-					<label value="123"/>
-					<label value="123"/>
-				</row>
-				<row>
-					<label value="6"/>
-					<label value="10:30"/>
-					<label value="11:30"/>
-					<label value="123"/>
-					<label value="Early Childhood Education and Care"/>
-					<label value="Early Childhood Education and Care"/>
-					<label value="Early Childhood Education and Care"/>
-					<label value="Early Childhood Education and Care"/>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL BSB42415 - Certificate IV in Marketing and Communication AND BSB42618 - Certificate IV in New Small Business" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day (Group 1)"/>
+							<label hflex="true" sclass="teacher" value="Kincaid Ashmore"/>
+							<label hflex="true" sclass="occupation" value="87 students"/>
+						</vbox>
+					</vbox>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL BSB42415 - Certificate IV in Marketing and Communication AND BSB42618 - Certificate IV in New Small Business" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day (Group 1)"/>
+							<label hflex="true" sclass="teacher" value="Kincaid Ashmore"/>
+							<label hflex="true" sclass="occupation" value="87 students"/>
+						</vbox>
+					</vbox>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL BSB42415 - Certificate IV in Marketing and Communication AND BSB42618 - Certificate IV in New Small Business" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day (Group 1)"/>
+							<label hflex="true" sclass="teacher" value="Kincaid Ashmore"/>
+							<label hflex="true" sclass="occupation" value="87 students"/>
+						</vbox>
+					</vbox>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL BSB42415 - Certificate IV in Marketing and Communication AND BSB42618 - Certificate IV in New Small Business" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day (Group 1)"/>
+							<label hflex="true" sclass="teacher" value="Kincaid Ashmore"/>
+							<label hflex="true" sclass="occupation" value="87 students"/>
+						</vbox>
+					</vbox>
+					<vbox hflex="true" style="padding: 0;">
+						<label hflex="true" sclass="course" value="DUAL BSB42415 - Certificate IV in Marketing and Communication AND BSB42618 - Certificate IV in New Small Business" />
+						<vbox align="center" style="margin: auto;">
+							<label hflex="true" sclass="delivery" value="Delivery Day (Group 1)"/>
+							<label hflex="true" sclass="teacher" value="Kincaid Ashmore"/>
+							<label hflex="true" sclass="occupation" value="87 students"/>
+						</vbox>
+					</vbox>
 				</row>
 			</rows>
 		</grid>

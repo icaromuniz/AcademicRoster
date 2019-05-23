@@ -1,0 +1,80 @@
+<?page title="Campus and Rooms" contentType="text/html;charset=UTF-8"?>
+<?init class="org.zkoss.zk.ui.util.Composition" arg0="/template.zul"?>
+
+<zk>
+	<window id="win" border="none" self="@define(content)" vflex="true">
+	
+		<caption label="Campus and Rooms" iconSclass="z-icon-database"/>
+		
+		<groupbox style="max-width: 1000px; margin: auto;">
+		
+			<caption label="Campus Details" style="font-weight: bold; color: Teal;"/>
+			
+			<grid style="border: none;">
+				<columns>
+					<column hflex="min"/>
+					<column/>
+				</columns>
+				<rows>
+					<row>
+						<label value="Campus Name:"/>
+						<textbox/>
+					</row>
+					<row>
+						<label value="Street Name:"/>
+						<textbox/>
+					</row>
+					<row>
+						<label value="Street Number:"/>
+						<textbox/>
+					</row>
+					<row>
+						<label value="Postcode:"/>
+						<textbox/>
+					</row>
+				</rows>
+			</grid>
+		</groupbox>
+
+		<separator/>
+		
+		<listbox multiple="true" checkmark="true" vflex="true" style="max-width: 1000px; margin: auto; border: none;">
+			<auxhead>
+				<auxheader label="Room List" colspan="4" style="color: Teal; border: none;">
+					<button iconSclass="z-icon-plus" style="float: right;"/>
+					<button iconSclass="z-icon-minus" style="float: right;"/>
+				</auxheader>
+			</auxhead>
+			<listhead>
+				<listheader hflex="min"/>
+				<listheader label="Identification"/>
+				<listheader label="Student Capacity" hflex="min"/>
+				<listheader label="Additional Info"/>
+			</listhead>
+			<listitem>
+				<listcell/>
+				<listcell>
+					<textbox placeholder="Number or Name of the room" hflex="true"/>
+				</listcell>
+				<listcell>
+					<intbox/>
+				</listcell>
+				<listcell>
+					<textbox hflex="true"/>
+				</listcell>
+			</listitem>
+			<listitem>
+				<listcell/>
+				<listcell>
+					<textbox placeholder="Number or Name of the room" hflex="true"/>
+				</listcell>
+				<listcell>
+					<intbox/>
+				</listcell>
+				<listcell>
+					<textbox hflex="true"/>
+				</listcell>
+			</listitem>
+		</listbox>
+	</window>
+</zk>

@@ -121,7 +121,11 @@ public class Task implements Serializable {
 		this.startTime = startTime;
 	}
 
-	public Boolean getUnderPlan() {
+	public boolean getUnderPlan() {
+		return this.underPlan;
+	}
+	
+	public boolean isUnderPlan() {
 		return this.underPlan;
 	}
 

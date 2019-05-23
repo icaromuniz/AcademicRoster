@@ -15,7 +15,7 @@
 		body {
 			color: #393939;
 			font-family: Tahoma, Geneva, sans-serif;
-			max-width: 1500px;
+			max-width: 1600px;
 			margin: auto;
 			padding: 0 30px;
 		}
@@ -83,16 +83,27 @@
 			</hbox>
 		</north>
 		
-		<west border="none" splittable="true">
+		<!-- ============== -->
+		<!-- Menu Principal -->
+		<!-- ============== -->
+		<west id="west" border="none" splittable="true" collapsible="true">
 			<menubar id="menubar" orient="vertical" style="border: 1px solid LightGrey; border-right: none; background: none;" vflex="true">
 				<menuitem label="Dashboard" href="/dashboard.zul" iconSclass="z-icon-comments"/>
 				<menu label="Academic" iconSclass="z-icon-graduation-cap">
 					<menupopup>
-						<menuitem label="Roster and Allocations" disabled="true" iconSclass="z-icon-book"/>
+						<menuitem label="Roster and Allocations" iconSclass="z-icon-calendar" href="/rosterandallocation.zul"/>
 						<menuitem label="Campus and Rooms" disabled="true" iconSclass="z-icon-home"/>
 						<menuitem label="Unit of Competency" iconSclass="z-icon-book"/>
 						<menuitem label="Room Allocation" iconSclass="z-icon-linux"/>
 						<menuitem label="Reports and Charts" disabled="true" iconSclass="z-icon-apple" />
+						<menu label="Assets" iconSclass="z-icon-database">
+							<menupopup>
+								<menuitem label="Campus and Rooms" iconSclass="z-icon-database" href="/asset/campus.zul"/>
+								<menuitem label="Unit of Competency" iconSclass="z-icon-database"/>
+								<menuitem label="Qualification" iconSclass="z-icon-database"/>
+								<menuitem label="Course Offer" disabled="true" iconSclass="z-icon-database" />
+							</menupopup>
+						</menu>
 					</menupopup>
 				</menu>
 				<menu label="Management" iconSclass="z-icon-line-chart">
