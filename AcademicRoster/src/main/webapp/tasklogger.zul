@@ -30,10 +30,10 @@
 				<!-- <listheader label="Spent" hflex="min" sort="auto(timeSpent)" align="center"/> -->
 				<listheader label="Planned" hflex="min"
 					sort="auto(underPlan)" />
-				<listheader label="Notes (Optional)" sort="auto(note)" />
-				<listheader label="Outcomes (Optional)"
+				<listheader label="Notes" sort="auto(note)" />
+				<listheader label="Outcomes"
 					sort="auto(outcome)" />
-				<listheader label="Follow Up Action (Optional)"
+				<listheader label="Follow Up Action"
 					sort="auto(followUpAction)" />
 			</listhead>
 			<template name="model" var="task">

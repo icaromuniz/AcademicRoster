@@ -1,0 +1,119 @@
+<?page title="Roster and Allocations" contentType="text/html;charset=UTF-8"?>
+<?init class="org.zkoss.zk.ui.util.Composition" arg0="/template.zul"?>
+<zk>
+	<window id="window" border="none" self="@define(content)">
+		<caption label="Roster and Allocations" iconSclass="z-icon-tasks" />
+		
+		<grid style="border: none;">
+			<auxhead>
+				<auxheader label="Allocation" colspan="3" align="center"/>
+				<auxheader label="Qualification" colspan="5" align="center"/>
+			</auxhead>
+			<columns>
+				<column label="Room" hflex="min"/>
+				<column label="Start" hflex="min"/>
+				<column label="Finish" hflex="min"/>
+				<column label="Monday"/>
+				<column label="Tuesday"/>
+				<column label="Wednesday"/>
+				<column label="Thursday"/>
+				<column label="Friday"/>
+			</columns>
+			<rows>
+				<row>
+					<label value="12"/>
+					<label value="10:00"/>
+					<label value="11:00"/>
+					<label value="Marketing and Communication"/>
+					<label value="ELICOS"/>
+					<label value="Digital Media"/>
+					<label value="Cookery"/>
+					<label value="Leadership and Management"/>
+				</row>
+				<row>
+					<label value="12"/>
+					<label value="15:30"/>
+					<label value="17:30"/>
+					<label value="Digital Media"/>
+					<label value="ELICOS"/>
+					<label value="Cookery"/>
+					<label value="Leadership and Management"/>
+					<label value="Marketing and Communication"/>
+				</row>
+				<row>
+					<label value="12"/>
+					<label value="20:00"/>
+					<label value="21:00"/>
+					<label value="123"/>
+					<label value="123"/>
+					<label value="123"/>
+					<label value="123"/>
+					<label value="123"/>
+				</row>
+				<row>
+					<label value="345"/>
+					<label value="15:00"/>
+					<label value="17:00"/>
+					<label value="123"/>
+					<label value="123"/>
+					<label value="123"/>
+					<label value="ELICOS"/>
+					<label value="ELICOS"/>
+				</row>
+				<row>
+					<label value="345"/>
+					<label value="19:30"/>
+					<label value="20:30"/>
+					<label value="Digital Media"/>
+					<label value="Marketing and Communication"/>
+					<label value="ELICOS"/>
+					<label value="Leadership and Management"/>
+					<label value="Cookery"/>
+				</row>
+				<row>
+					<label value="345"/>
+					<label value="19:30"/>
+					<label value="20:30"/>
+					<label value="Digital Media"/>
+					<vbox>
+						<label style="color: Green;" value="Marketing and Communication"/>
+						<label style="color: Orange;" value="Trainer: Stephen"/>
+						<label style="color: Orange;" value="Trainer: Stephen"/>
+					</vbox>
+					<label value="ELICOS"/>
+					<label value="Leadership and Management"/>
+					<label value="Cookery"/>
+				</row>
+				<row>
+					<label value="345"/>
+					<label value="19:30"/>
+					<label value="20:30"/>
+					<label value="Digital Media"/>
+					<label value="Marketing and Communication"/>
+					<label value="ELICOS"/>
+					<label value="Leadership and Management"/>
+					<label value="Cookery"/>
+				</row>
+				<row>
+					<label value="6"/>
+					<label value="10:30"/>
+					<label value="123"/>
+					<label value="123"/>
+					<label value="123"/>
+					<label value="123"/>
+					<label value="123"/>
+				</row>
+				<row>
+					<label value="6"/>
+					<label value="10:30"/>
+					<label value="11:30"/>
+					<label value="123"/>
+					<label value="Early Childhood Education and Care"/>
+					<label value="Early Childhood Education and Care"/>
+					<label value="Early Childhood Education and Care"/>
+					<label value="Early Childhood Education and Care"/>
+				</row>
+			</rows>
+		</grid>
+	</window>
+</zk>

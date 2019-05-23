@@ -78,33 +78,34 @@
 			<hbox style="padding: 5px 0;" hflex="true">
 				<image src="https://cdn2.hubspot.net/hubfs/3445426/Copy%20of%20LOGO_PNG.png" height="60px"/>
 				<space hflex="true"/>
-				<toolbarbutton iconSclass="z-icon-gear" style="font-size: xx-large; color: Teal; vertical-align: bottom;"/>
+				<toolbarbutton iconSclass="z-icon-gear" style="font-size: xx-large; color: Teal;"/>
 				<toolbarbutton iconSclass="z-icon-user" style="font-size: xx-large; color: Teal;"/>
 			</hbox>
 		</north>
 		
-		<west border="none">
+		<west border="none" splittable="true">
 			<menubar id="menubar" orient="vertical" style="border: 1px solid LightGrey; border-right: none; background: none;" vflex="true">
 				<menuitem label="Dashboard" href="/dashboard.zul" iconSclass="z-icon-comments"/>
 				<menu label="Academic" iconSclass="z-icon-graduation-cap">
 					<menupopup>
+						<menuitem label="Roster and Allocations" disabled="true" iconSclass="z-icon-book"/>
+						<menuitem label="Campus and Rooms" disabled="true" iconSclass="z-icon-home"/>
 						<menuitem label="Unit of Competency" iconSclass="z-icon-book"/>
-						<menuitem label="Qualification" disabled="true" iconSclass="z-icon-windows"/>
 						<menuitem label="Room Allocation" iconSclass="z-icon-linux"/>
-						<menuitem label="Report" disabled="true" iconSclass="z-icon-apple" />
+						<menuitem label="Reports and Charts" disabled="true" iconSclass="z-icon-apple" />
 					</menupopup>
 				</menu>
-				<menu label="Marketing &amp; Sales" iconSclass="z-icon-bullhorn">
+				<menu label="Management" iconSclass="z-icon-line-chart">
 					<menupopup>
-						<menuitem label="Task Logger" iconSclass="z-icon-tasks" href="/tasklogger.zul"/>
+						<menuitem label="Task Time Logger" iconSclass="z-icon-tasks" href="/tasklogger.zul"/>
 						<menuitem label="Work Chart" iconSclass="z-icon-bar-chart"/>
 						<menuitem label="Task Report" disabled="true" iconSclass="z-icon-windows"/>
 						<menuitem label="Report" disabled="true" iconSclass="z-icon-pie-chart" />
 					</menupopup>
 				</menu>
-				<menu label="Management" iconSclass="z-icon-line-chart">
+				<menu label="Marketing &amp; Sales" iconSclass="z-icon-bullhorn">
 					<menupopup>
-						<menuitem label="Task Logger" iconSclass="z-icon-tasks" href="/tasklogger.zul"/>
+						<menuitem label="Task Logger" iconSclass="z-icon-tasks" href="/tasklogger.zul" disabled="true"/>
 						<menuitem label="Work Chart" iconSclass="z-icon-bar-chart"/>
 						<menuitem label="Task Report" disabled="true" iconSclass="z-icon-windows"/>
 						<menuitem label="Report" disabled="true" iconSclass="z-icon-pie-chart" />
