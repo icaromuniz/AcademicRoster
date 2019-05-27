@@ -93,8 +93,8 @@
 					<menupopup>
 						<menuitem label="Roster and Allocations" iconSclass="z-icon-calendar" href="/rosterandallocation.zul"/>
 						<menuitem label="Campus and Rooms" disabled="true" iconSclass="z-icon-home"/>
-						<menuitem label="Unit of Competency" iconSclass="z-icon-book"/>
-						<menuitem label="Room Allocation" iconSclass="z-icon-linux"/>
+						<menuitem label="Unit of Competency" iconSclass="z-icon-book" disabled="true"/>
+						<menuitem label="Room Allocation" iconSclass="z-icon-linux" disabled="true"/>
 						<menuitem label="Reports and Charts" disabled="true" iconSclass="z-icon-apple" />
 						<menu label="Assets" iconSclass="z-icon-database">
 							<menupopup>
@@ -108,8 +108,8 @@
 				</menu>
 				<menu label="Management" iconSclass="z-icon-line-chart">
 					<menupopup>
-						<menuitem label="Task Time Logger" iconSclass="z-icon-tasks" href="/tasklogger.zul"/>
-						<menuitem label="Work Chart" iconSclass="z-icon-bar-chart"/>
+						<menuitem label="Task Time Logger" iconSclass="z-icon-tasks" href="/tasklogger.zul" disabled="true"/>
+						<menuitem label="Work Chart" iconSclass="z-icon-bar-chart" disabled="true"/>
 						<menuitem label="Task Report" disabled="true" iconSclass="z-icon-windows"/>
 						<menuitem label="Report" disabled="true" iconSclass="z-icon-pie-chart" />
 					</menupopup>
@@ -117,41 +117,45 @@
 				<menu label="Marketing &amp; Sales" iconSclass="z-icon-bullhorn">
 					<menupopup>
 						<menuitem label="Task Logger" iconSclass="z-icon-tasks" href="/tasklogger.zul" disabled="true"/>
-						<menuitem label="Work Chart" iconSclass="z-icon-bar-chart"/>
+						<menuitem label="Work Chart" iconSclass="z-icon-bar-chart" disabled="true"/>
 						<menuitem label="Task Report" disabled="true" iconSclass="z-icon-windows"/>
 						<menuitem label="Report" disabled="true" iconSclass="z-icon-pie-chart" />
 					</menupopup>
 				</menu>
 				<menu label="Human Resources" iconSclass="z-icon-user">
 					<menupopup>
-						<menuitem label="Unit of Competency" iconSclass="z-icon-book"/>
+						<menuitem label="Unit of Competency" iconSclass="z-icon-book" disabled="true"/>
 						<menuitem label="Qualification" disabled="true" iconSclass="z-icon-windows"/>
-						<menuitem label="Room Allocation" iconSclass="z-icon-linux"/>
+						<menuitem label="Room Allocation" iconSclass="z-icon-linux" disabled="true"/>
 						<menuitem label="Report" disabled="true" iconSclass="z-icon-apple" />
 					</menupopup>
 				</menu>
 				<menu label="Finance" iconSclass="z-icon-usd">
 					<menupopup>
-						<menuitem label="Unit of Competency" iconSclass="z-icon-book"/>
+						<menuitem label="Payments" iconSclass="z-icon-money" disabled="true"/>
+						<menuitem label="Unit of Competency" iconSclass="z-icon-book" disabled="true"/>
 						<menuitem label="Qualification" disabled="true" iconSclass="z-icon-windows"/>
-						<menuitem label="Room Allocation" iconSclass="z-icon-linux"/>
+						<menuitem label="Room Allocation" iconSclass="z-icon-linux" disabled="true"/>
 						<menuitem label="Report" disabled="true" iconSclass="z-icon-apple" />
 					</menupopup>
 				</menu>
 				<menu label="Sustainability" iconSclass="z-icon-leaf">
 					<menupopup>
-						<menuitem label="Unit of Competency" iconSclass="z-icon-book"/>
+						<menuitem label="Unit of Competency" iconSclass="z-icon-pagelines" disabled="true"/>
 						<menuitem label="Qualification" disabled="true" iconSclass="z-icon-windows"/>
-						<menuitem label="Room Allocation" iconSclass="z-icon-linux"/>
+						<menuitem label="Room Allocation" iconSclass="z-icon-linux" disabled="true"/>
 						<menuitem label="Report" disabled="true" iconSclass="z-icon-apple" />
 					</menupopup>
 				</menu>
 				<menu label="Information Technology" iconSclass="z-icon-database">
 					<menupopup>
-						<menuitem label="Unit of Competency" iconSclass="z-icon-book"/>
-						<menuitem label="Qualification" disabled="true" iconSclass="z-icon-windows"/>
-						<menuitem label="Room Allocation" iconSclass="z-icon-linux"/>
-						<menuitem label="Report" disabled="true" iconSclass="z-icon-apple" />
+						<menuitem label="Windows" disabled="true" iconSclass="z-icon-windows"/>
+						<menuitem label="Linux" iconSclass="z-icon-linux" disabled="true"/>
+						<menuitem label="Apple" disabled="true" iconSclass="z-icon-apple" />
+						<menuitem label="Servers" disabled="true" iconSclass="z-icon-server" />
+						<menuitem label="Laptops" disabled="true" iconSclass="z-icon-laptop" />
+						<menuitem label="Desktops" disabled="true" iconSclass="z-icon-desktop" />
+						<menuitem label="Headphones" disabled="true" iconSclass="z-icon-headphones" />
 					</menupopup>
 				</menu>
 				<menuitem label="Log out" onClick='$composer.executaLogout()' iconSclass="z-icon-sign-out" />
