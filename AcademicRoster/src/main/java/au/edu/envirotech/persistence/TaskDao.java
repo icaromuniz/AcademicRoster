@@ -6,9 +6,6 @@ import au.edu.envirotech.architecture.AbstractDao;
 import au.edu.envirotech.model.Task;
 
 @Stateless
-public class TaskDao extends AbstractDao {
+public class TaskDao extends AbstractDao<Task> {
 
-	public Task save(Task task) {
-		return getEntityManager().merge(task);
-	}
 }

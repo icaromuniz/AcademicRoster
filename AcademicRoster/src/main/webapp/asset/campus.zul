@@ -2,7 +2,7 @@
 <?init class="org.zkoss.zk.ui.util.Composition" arg0="/template.zul"?>
 
 <zk>
-	<window id="win" border="none" self="@define(content)" vflex="true">
+	<window id="win" border="none" self="@define(content)" vflex="true" apply="au.edu.envirotech.presentation.CampusComposer">
 	
 		<caption label="Campus and Rooms" iconSclass="z-icon-database"/>
 		

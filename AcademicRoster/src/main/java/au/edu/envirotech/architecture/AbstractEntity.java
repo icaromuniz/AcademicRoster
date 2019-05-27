@@ -18,6 +18,10 @@ public abstract class AbstractEntity implements Serializable {
 	public abstract void setId(Integer id);
 
 	public abstract Integer getId();
+	
+	public AbstractEntity() {
+		
+	}
 
 	public Integer getVersion() {
 		return version;

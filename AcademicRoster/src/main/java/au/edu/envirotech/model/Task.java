@@ -1,16 +1,29 @@
 package au.edu.envirotech.model;
 
-import java.io.Serializable;
-import javax.persistence.*;
 import java.sql.Time;
 import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import au.edu.envirotech.architecture.AbstractEntity;
 
 /**
  * The persistent class for the task database table.
  */
 @Entity
 @NamedQuery(name = "Task.findAll", query = "SELECT t FROM Task t")
-public class Task implements Serializable {
+public class Task extends AbstractEntity {
+	
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -124,7 +137,7 @@ public class Task implements Serializable {
 	public boolean getUnderPlan() {
 		return this.underPlan;
 	}
-	
+
 	public boolean isUnderPlan() {
 		return this.underPlan;
 	}

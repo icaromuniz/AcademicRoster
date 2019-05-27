@@ -27,7 +27,7 @@
 				<space hflex="true" />
 				<groupbox hflex="min" closable="false">
 					<caption iconSclass="z-icon-user" label="Login"/>
-					<grid hflex="min" >
+					<grid hflex="min" apply="au.edu.envirotech.presentation.AuthenticationComposer">
 						<rows>
 							<row>
 								<label value="E-mail:" />

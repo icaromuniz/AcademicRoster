@@ -1,16 +1,27 @@
 package au.edu.envirotech.model;
 
-import java.io.Serializable;
-import javax.persistence.*;
 import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+import au.edu.envirotech.architecture.AbstractEntity;
 
 /**
  * The persistent class for the user database table.
  * 
  */
 @Entity
+@Table(schema="public")
 @NamedQuery(name = "User.findAll", query = "SELECT u FROM User u")
-public class User implements Serializable {
+public class User extends AbstractEntity {
+	
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -25,8 +36,13 @@ public class User implements Serializable {
 	// bi-directional many-to-one association to Task
 	@OneToMany(mappedBy = "user")
 	private List<Task> tasks;
-
+	
 	public User() {
+	}
+
+	public User(String email, String password) {
+		this.email = email;
+		this.password = password;
 	}
 
 	public Integer getId() {

@@ -42,9 +42,9 @@ public class MyViewModel {
 			uoc.setCode(uoc.getCode() + count);
 			dao.save(uoc);
 			
-			UnitOfCompetency uocOne = dao.getEntityManager().find(UnitOfCompetency.class, 1);
-			uocOne.setCode(uocOne.getCode() + (count-100));
-			dao.save(uocOne);
+//			UnitOfCompetency uocOne = dao.entityManager().find(UnitOfCompetency.class, 1);
+//			uocOne.setCode(uocOne.getCode() + (count-100));
+//			dao.save(uocOne);
 			
 //			TaskDao taskDao = (TaskDao)InitialContext.doLookup("java:module/TaskDao");
 //			Task t = new Task();
