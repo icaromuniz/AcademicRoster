@@ -15,9 +15,9 @@ public abstract class AbstractEntity implements Serializable {
 	@Column(nullable = false)
 	private Integer version;
 
-	public abstract void setId(int id);
+	public abstract void setId(Integer id);
 
-	public abstract int getId();
+	public abstract Integer getId();
 
 	public Integer getVersion() {
 		return version;

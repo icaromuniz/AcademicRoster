@@ -5,6 +5,8 @@
 		<class>au.edu.envirotech.model.Task</class>
 		<class>au.edu.envirotech.model.UnitOfCompetency</class>
 		<class>au.edu.envirotech.model.User</class>
+		<class>au.edu.envirotech.model.Campus</class>
+		<class>au.edu.envirotech.model.Room</class>
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>

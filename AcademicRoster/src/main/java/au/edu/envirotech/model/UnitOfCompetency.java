@@ -31,12 +31,12 @@ public class UnitOfCompetency extends AbstractEntity {
 	private String unitSector;
 
 	@Override
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
 	@Override
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
