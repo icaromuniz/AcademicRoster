@@ -91,12 +91,7 @@
 				<menuitem label="Dashboard" href="/dashboard.zul" iconSclass="z-icon-comments"/>
 				<menu label="Academic" iconSclass="z-icon-graduation-cap">
 					<menupopup>
-						<menuitem label="Roster and Allocations" iconSclass="z-icon-calendar" href="/rosterandallocation.zul"/>
-						<menuitem label="Campus and Rooms" disabled="true" iconSclass="z-icon-home"/>
-						<menuitem label="Unit of Competency" iconSclass="z-icon-book" disabled="true"/>
-						<menuitem label="Room Allocation" iconSclass="z-icon-linux" disabled="true"/>
-						<menuitem label="Reports and Charts" disabled="true" iconSclass="z-icon-apple" />
-						<menu label="Assets" iconSclass="z-icon-database">
+						<menu label="Asset Registry" iconSclass="z-icon-database">
 							<menupopup>
 								<menuitem label="Campus and Rooms" iconSclass="z-icon-database" href="/asset/campus.zul"/>
 								<menuitem label="Unit of Competency" iconSclass="z-icon-database"/>
@@ -104,6 +99,11 @@
 								<menuitem label="Course Offer" disabled="true" iconSclass="z-icon-database" />
 							</menupopup>
 						</menu>
+						<menuitem label="Roster and Allocations" iconSclass="z-icon-calendar" href="/rosterandallocation.zul"/>
+						<menuitem label="Campus and Rooms" disabled="true" iconSclass="z-icon-home"/>
+						<menuitem label="Unit of Competency" iconSclass="z-icon-book" disabled="true"/>
+						<menuitem label="Room Allocation" iconSclass="z-icon-linux" disabled="true"/>
+						<menuitem label="Reports and Charts" disabled="true" iconSclass="z-icon-apple" />
 					</menupopup>
 				</menu>
 				<menu label="Management" iconSclass="z-icon-line-chart">
@@ -158,7 +158,7 @@
 						<menuitem label="Headphones" disabled="true" iconSclass="z-icon-headphones" />
 					</menupopup>
 				</menu>
-				<menuitem label="Log out" onClick='$composer.executaLogout()' iconSclass="z-icon-sign-out" />
+				<menuitem label="Log out" onClick='Sessions.getCurrent().removeAttribute("auth_usr"); Executions.sendRedirect("/login.zul")' iconSclass="z-icon-sign-out" />
 			</menubar>
 		</west>
 

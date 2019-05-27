@@ -27,8 +27,8 @@ public class Task extends AbstractEntity {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@SequenceGenerator(name = "TASK_ID_GENERATOR", allocationSize = 1)
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "TASK_ID_GENERATOR")
+	@SequenceGenerator(name = "TASK_SEQ", allocationSize = 1)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "TASK_SEQ")
 	private Integer id;
 
 	@Temporal(TemporalType.DATE)

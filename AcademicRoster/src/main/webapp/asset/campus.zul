@@ -38,43 +38,34 @@
 
 		<separator/>
 		
-		<listbox multiple="true" checkmark="true" vflex="true" style="max-width: 1000px; margin: auto; border: none;">
+		<listbox id="listbox" multiple="true" checkmark="true" vflex="true" model="@bind($composer.model.roomList)"
+			style="max-width: 1000px; margin: auto; border: none;">
 			<auxhead>
 				<auxheader label="Room List" colspan="4" style="color: Teal; border: none;">
-					<button iconSclass="z-icon-plus" style="float: right;"/>
-					<button iconSclass="z-icon-minus" style="float: right;"/>
+					<button iconSclass="z-icon-minus" style="float: right;" onClick="$composer.removeRoom()"/>
+					<button iconSclass="z-icon-plus" style="float: right;" onClick="$composer.addRoom()"/>
 				</auxheader>
 			</auxhead>
 			<listhead>
 				<listheader hflex="min"/>
-				<listheader label="Identification"/>
-				<listheader label="Student Capacity" hflex="min"/>
+				<listheader label="Number"/>
+				<listheader label="Student Capacity"/>
 				<listheader label="Additional Info"/>
 			</listhead>
-			<listitem>
-				<listcell/>
-				<listcell>
-					<textbox placeholder="Number or Name of the room" hflex="true"/>
-				</listcell>
-				<listcell>
-					<intbox/>
-				</listcell>
-				<listcell>
-					<textbox hflex="true"/>
-				</listcell>
-			</listitem>
-			<listitem>
-				<listcell/>
-				<listcell>
-					<textbox placeholder="Number or Name of the room" hflex="true"/>
-				</listcell>
-				<listcell>
-					<intbox/>
-				</listcell>
-				<listcell>
-					<textbox hflex="true"/>
-				</listcell>
-			</listitem>
+			<template name="model" var="room">
+				<listitem value="@bind(room)">
+					<listcell/>
+					<listcell>
+						<textbox value="@bind(room.number)"/>
+					</listcell>
+					<listcell>
+						<intbox value="@bind(room.capacity)"/>
+					</listcell>
+					<listcell>
+						<textbox value="@bind(room.comment)"/>
+					</listcell>
+				</listitem>
+			</template>
 		</listbox>
 	</window>
 </zk>

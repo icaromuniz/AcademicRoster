@@ -63,12 +63,11 @@ public class AuthenticationComposer extends BindComposer<Component> {
 	
 	public void doLogin() {
 		
-		if ((textboxEmail.getValue() != null || !textboxEmail.getValue().isEmpty()) &&
-				textboxPassword.getValue() != null || !textboxPassword.getValue().isEmpty() ) {
+		if ((textboxEmail.getValue() != null && !textboxEmail.getValue().isEmpty()) &&
+				textboxPassword.getValue() != null && !textboxPassword.getValue().isEmpty() ) {
 			
-			User authorizedUser = null;
-			
-			authorizedUser = SessionBeanUtils.getDao(UserDao.class).findByCredentials(textboxEmail.getValue(), textboxPassword.getValue());
+			User authorizedUser = SessionBeanUtils.getDao(UserDao.class).findByCredentials(
+					textboxEmail.getValue(), textboxPassword.getValue());
 				
 			if (authorizedUser != null) {
 				

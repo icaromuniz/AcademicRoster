@@ -25,8 +25,8 @@ public class User extends AbstractEntity {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@SequenceGenerator(name = "USER_ID_GENERATOR", allocationSize = 1)
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "USER_ID_GENERATOR")
+	@SequenceGenerator(name = "USER_SEQ", allocationSize = 1)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "USER_SEQ")
 	private Integer id;
 
 	private String email;

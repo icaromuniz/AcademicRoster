@@ -1,5 +1,6 @@
 package au.edu.envirotech.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -14,35 +15,34 @@ import javax.persistence.Table;
 
 import au.edu.envirotech.architecture.AbstractEntity;
 
-
 /**
  * The persistent class for the campus database table.
  * 
  */
-@Entity 
-@Table(name="campus")
-@NamedQuery(name="Campus.findAll", query="SELECT c FROM Campus c")
-public class Campus extends AbstractEntity  { 
+@Entity
+@Table(name = "campus")
+@NamedQuery(name = "Campus.findAll", query = "SELECT c FROM Campus c")
+public class Campus extends AbstractEntity {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@SequenceGenerator(name="CAMPUS_ID_GENERATOR" )
-	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="CAMPUS_ID_GENERATOR")
-	@Column(unique=true, nullable=false)
+	@SequenceGenerator(name = "CAMPUS_ID_GENERATOR", allocationSize = 1)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CAMPUS_ID_GENERATOR")
+	@Column(unique = true, nullable = false)
 	private Integer id;
 
-	@Column(nullable=false, length=10)
+	@Column(nullable = false, length = 10)
 	private String number;
 
-	@Column(nullable=false, length=4)
+	@Column(nullable = false, length = 4)
 	private String postcode;
 
-	@Column(nullable=false, length=100)
+	@Column(nullable = false, length = 100)
 	private String street;
 
-	//bi-directional many-to-one association to Room
-	@OneToMany(mappedBy="campus")
-	private List<Room> rooms;
+	// bi-directional many-to-one association to Room
+	@OneToMany(mappedBy = "campus")
+	private List<Room> roomList = new ArrayList<>();
 
 	public Integer getId() {
 		return this.id;
@@ -76,23 +76,23 @@ public class Campus extends AbstractEntity  {
 		this.street = street;
 	}
 
-	public List<Room> getRooms() {
-		return this.rooms;
+	public List<Room> getRoomList() {
+		return roomList;
 	}
 
-	public void setRooms(List<Room> rooms) {
-		this.rooms = rooms;
+	public void setRoomList(List<Room> roomList) {
+		this.roomList = roomList;
 	}
 
 	public Room addRoom(Room room) {
-		getRooms().add(room);
+		getRoomList().add(room);
 		room.setCampus(this);
 
 		return room;
 	}
 
 	public Room removeRoom(Room room) {
-		getRooms().remove(room);
+		getRoomList().remove(room);
 		room.setCampus(null);
 
 		return room;

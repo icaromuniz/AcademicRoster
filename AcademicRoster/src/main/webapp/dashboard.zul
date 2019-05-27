@@ -6,14 +6,80 @@
 	
 		<caption label="Dashboard" iconSclass="z-icon-comments"/>
 		
-		<button>Click</button>
-		<tabbox>
-			<tabs>
-				<tab label="painel"></tab>
-				<tab label="Next"></tab>
-				<tab label="Following" iconSclass="z-icon-forward"/>
-				
-			</tabs>
-		</tabbox>
+		<grid style="padding: 30px 50px; border: none;">
+			<columns>
+				<column label="Burleigh Campus"/>
+				<column label="Byron Bay Campus"/>
+				<column label="Currumbin Valley Campus"/>
+			</columns>
+				<rows>
+					<row>
+						<label value="Vacancy: XXX"/>
+						<label value="Vacancy: XXX"/>
+						<label value="Vacancy: XXX"/>
+					</row>
+					<row>
+						<label value="Students: XXX"/>
+						<label value="Students: XXX"/>
+						<label value="Students: XXX"/>
+					</row>
+					<row>
+						<label value="Rooms: XXX"/>
+						<label value="Rooms: XXX"/>
+						<label value="Rooms: XXX"/>
+					</row>
+					<row>
+						<label value="Trainers: XXX"/>
+						<label value="Trainers: XXX"/>
+						<label value="Trainers: XXX"/>
+					</row>
+					<row>
+						<label value="Courses: XXX"/>
+						<label value="Courses: XXX"/>
+						<label value="Courses: XXX"/>
+					</row>
+					<row>
+						<label value="New Enrolments: XXX"/>
+						<label value="New Enrolments: XXX"/>
+						<label value="New Enrolments: XXX"/>
+					</row>
+				</rows>
+		</grid>
+		
+		<separator/>
+		
+		<hbox width="100%" vflex="true">
+			<tabbox hflex="true" vflex="true">
+				<tabs>
+					<tab label="Pie Chart" iconSclass="z-icon-pie-chart"/>
+					<tab label="Bar Chart" iconSclass="z-icon-bar-chart"/>
+					<tab label="Enrolment Growth" iconSclass="z-icon-line-chart"/>
+				</tabs>
+				<tabpanels vflex="true">
+					<tabpanel vflex="true" style="vertical-align: middle;">
+						<space vflex="true"/>
+						<div style="margin: auto; text-align: center;">
+							<label>...Prototype A...</label>
+						</div>
+						<space vflex="true"/>
+					</tabpanel>
+					<tabpanel vflex="true" style="vertical-align: middle;">
+						<space vflex="true"/>
+						<div style="margin: auto; text-align: center;">
+							<label>...Prototype B...</label>
+						</div>
+						<space vflex="true"/>
+					</tabpanel>
+					<tabpanel vflex="true" style="vertical-align: middle;">
+						<space vflex="true"/>
+						<div style="margin: auto; text-align: center;">
+							<label>...Prototype C...</label>
+						</div>
+						<space vflex="true"/>
+					</tabpanel>
+				</tabpanels>	
+			</tabbox>
+			<calendar hflex="true" vflex="true"/>
+		</hbox>
 	</window>
 </zk>

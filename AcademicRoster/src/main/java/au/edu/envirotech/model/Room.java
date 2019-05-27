@@ -11,32 +11,33 @@ import javax.persistence.NamedQuery;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-
 /**
  * The persistent class for the room database table.
  * 
  */
 @Entity
-@Table(name="room")
-@NamedQuery(name="Room.findAll", query="SELECT r FROM Room r")
-public class Room extends au.edu.envirotech.architecture.AbstractEntity  {
+@Table(name = "room")
+@NamedQuery(name = "Room.findAll", query = "SELECT r FROM Room r")
+public class Room extends au.edu.envirotech.architecture.AbstractEntity {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@SequenceGenerator(name="ROOM_ID_GENERATOR" )
-	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ROOM_ID_GENERATOR")
-	@Column(unique=true, nullable=false)
+	@SequenceGenerator(name = "ROOM_ID_GENERATOR", allocationSize = 1)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ROOM_ID_GENERATOR")
+	@Column(unique = true, nullable = false)
 	private Integer id;
 
-	@Column(length=100)
+	private Integer capacity;
+
+	@Column(length = 100)
 	private String comment;
 
-	@Column(length=5)
+	@Column(length = 5)
 	private String number;
 
-	//bi-directional many-to-one association to Campus
+	// bi-directional many-to-one association to Campus
 	@ManyToOne
-	@JoinColumn(name="campus_id", nullable=false)
+	@JoinColumn(name = "campus_id", nullable = false)
 	private Campus campus;
 
 	public Room() {
@@ -48,6 +49,14 @@ public class Room extends au.edu.envirotech.architecture.AbstractEntity  {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	public Integer getCapacity() {
+		return capacity;
+	}
+
+	public void setCapacity(Integer capacity) {
+		this.capacity = capacity;
 	}
 
 	public String getComment() {
