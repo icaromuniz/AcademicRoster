@@ -149,6 +149,20 @@
 				</menu>
 				<menu label="Information Technology" iconSclass="z-icon-database">
 					<menupopup>
+						<menu label="Inventory Registry" iconSclass="z-icon-folder">
+							<menupopup>
+								<menuitem label="Hardware" iconSclass="z-icon-laptop"/>
+								<menuitem label="Software" iconSclass="z-icon-save"/>
+							</menupopup>
+						</menu>
+						<menu label="Permission Management" iconSclass="z-icon-key">
+							<menupopup>
+								<menuitem label="Office 365" iconSclass="z-icon-windows"/>
+								<menuitem label="Network" iconSclass="z-icon-wifi"/>
+								<menuitem label="Moodle" iconSclass="z-icon-pencil"/>
+								<menuitem label="RTO Manager" iconSclass="z-icon-pencil"/>
+							</menupopup>
+						</menu>
 						<menuitem label="Windows" disabled="true" iconSclass="z-icon-windows"/>
 						<menuitem label="Linux" iconSclass="z-icon-linux" disabled="true"/>
 						<menuitem label="Apple" disabled="true" iconSclass="z-icon-apple" />
